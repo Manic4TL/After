@@ -58,9 +58,9 @@ public class Item {
 		} else if (amount <= 80) {
 			name = "<color=#1975FF>Very wet</color>";
 		} else if (amount <=98){
-			name= "<color=#0066FF>Drenched</color>";
+			name= "<color=#0066FF>Soaked</color>";
 		} else{
-			name="<color=#005CE6>Soaked</color>";
+			name="<color=#005CE6>Drenched</color>";
 		}
 
 
