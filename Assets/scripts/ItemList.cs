@@ -50,6 +50,17 @@ public static class ItemList{
 			desc= "A light T-shirt. Wont keep you very warm but perfect for summer.",
 			effects= new string[]{"T+1"},
 			itemType = 1
+		},
+		new Item{
+			ID= 5,
+			name="Stand Issue Jacket",
+			sprite =  Resources.LoadAll<Sprite>("sprites/empty_f"),
+			icon = Resources.Load<Texture>("sprites/icons/top_icon"),
+			equipslot = 1,
+			desc= "A light coat designed to keep the rain off.",
+			effects= new string[]{"T+2"},
+			itemType = 1,
+			waterProof = true
 		}
 
 	};

@@ -16,13 +16,13 @@ public class Item {
 	public int MaxStack = 1;
 	public int itemType = 0;
 	public Color tint = new Color(1,1,1,1);
-
+	public bool waterProof = false;
 
 	public Item(){
 		
 	}
 
-	public Item ( int thisID,string thisName,Texture thisIcon,bool thisCanmove,Sprite[] thisSprite,int thisEquipSlot,string thisDesc,string[] thisEffects,float thisWetness, int thisQuantity, int thisMaxStack, int thisItemType, Color thisTint){
+	public Item ( int thisID,string thisName,Texture thisIcon,bool thisCanmove,Sprite[] thisSprite,int thisEquipSlot,string thisDesc,string[] thisEffects,float thisWetness, int thisQuantity, int thisMaxStack, int thisItemType, Color thisTint, bool thisWaterProof){
 		ID=thisID;
 		name = thisName;
 		icon = thisIcon;
@@ -34,14 +34,14 @@ public class Item {
 		wetness = thisWetness;
 		Quantity = thisQuantity;
 		MaxStack = thisMaxStack;
-		thisItemType = itemType;
-		thisTint = tint;
-
+		itemType = thisItemType;
+		tint = thisTint;
+		waterProof = thisWaterProof;
 	} 
 
 	public object Clone ()
 	{
-		Item item = new Item( ID,name,icon,canmove,sprite,equipslot,desc,effects,wetness,Quantity,MaxStack,itemType,tint );
+		Item item = new Item( ID,name,icon,canmove,sprite,equipslot,desc,effects,wetness,Quantity,MaxStack,itemType,tint,waterProof );
 		return item;
 	}
 
@@ -50,17 +50,17 @@ public class Item {
 		string name;
 
 		if (amount <= 5) {
-			name = "<color=#B2D1FF>dry</color>";
+			name = "<color=#B2D1FF>Dry</color>";
 		} else if (amount <= 25) {
-			name = "<color=#80B2FF>damp</color>";
+			name = "<color=#80B2FF>Damp</color>";
 		} else if (amount <= 55) {
-			name = "<color=#4D94FF>wet</color>";
+			name = "<color=#4D94FF>Wet</color>";
 		} else if (amount <= 80) {
 			name = "<color=#1975FF>Very wet</color>";
 		} else if (amount <=98){
-			name= "<color=#0066FF>Drenched</color>";
+			name= "<color=#0066FF>Soaked</color>";
 		} else{
-			name="<color=#005CE6>Soaked</color>";
+			name="<color=#005CE6>Drenched</color>";
 		}
 
 
