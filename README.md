@@ -4,7 +4,7 @@ Make all changes in a new branch. DO NOT modify / commit to the master branch
 
 #Joblist
 --UI
-better looking main menu
+better looking main menu /nl
 Custom skin on inventory UI
 named inventories
 
