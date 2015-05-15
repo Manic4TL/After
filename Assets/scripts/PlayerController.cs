@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 	public bool canforward = true;
 
 	Rigidbody2D body;
-	float walkSpeed = 2.5f;
+	public float walkSpeed = 3f;
 	public bool grounded = false;
 	public bool sprinting = false;
 	public float jumpSpeed = 4f;
